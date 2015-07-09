@@ -1,0 +1,183 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Ervan
+ * Date: 09/07/2015
+ * Time: 13:07
+ */
+
+namespace Palme\AnnaleBundle\Entity;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Class Annale
+ * @package Palme\AnnaleBundle\Entity
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Palme\AnnaleBundle\Entity")
+ */
+class Annale
+{
+
+    /**
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+
+    /**
+     * @ORM\Column(name="annee", type="string")
+     */
+    protected $annee;
+
+    /**
+     * @ORM\Column(name="url", type="string")
+     */
+    protected $url;
+
+
+    /**
+     * @ORM\ManytoOne(targetEntity="Matiere", cascade={"persist"})
+     */
+    protected $matiere;
+
+
+    /**
+     * @ORM\ManytoOne(targetEntity="Enseignant", cascade={"persist"})
+     */
+    protected $enseignant;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Reservation", mappedBy="annale", cascade={"persist"})
+     */
+    protected $reservation;
+
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set annee
+     *
+     * @param string $annee
+     * @return Annale
+     */
+    public function setAnnee($annee)
+    {
+        $this->annee = $annee;
+
+        return $this;
+    }
+
+    /**
+     * Get annee
+     *
+     * @return string 
+     */
+    public function getAnnee()
+    {
+        return $this->annee;
+    }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     * @return Annale
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string 
+     */
+    public function getUrl()
+    {
+        return $this->url;
+    }
+
+    /**
+     * Set matiere
+     *
+     * @param \Palme\AnnaleBundle\Entity\Matiere $matiere
+     * @return Annale
+     */
+    public function setMatiere(\Palme\AnnaleBundle\Entity\Matiere $matiere = null)
+    {
+        $this->matiere = $matiere;
+
+        return $this;
+    }
+
+    /**
+     * Get matiere
+     *
+     * @return \Palme\AnnaleBundle\Entity\Matiere 
+     */
+    public function getMatiere()
+    {
+        return $this->matiere;
+    }
+
+    /**
+     * Set enseignant
+     *
+     * @param \Palme\AnnaleBundle\Entity\Enseignant $enseignant
+     * @return Annale
+     */
+    public function setEnseignant(\Palme\AnnaleBundle\Entity\Enseignant $enseignant = null)
+    {
+        $this->enseignant = $enseignant;
+
+        return $this;
+    }
+
+    /**
+     * Get enseignant
+     *
+     * @return \Palme\AnnaleBundle\Entity\Enseignant 
+     */
+    public function getEnseignant()
+    {
+        return $this->enseignant;
+    }
+
+    /**
+     * Set reservations
+     *
+     * @param \Palme\AnnaleBundle\Entity\Reservation $reservations
+     * @return Annale
+     */
+    public function setReservations(\Palme\AnnaleBundle\Entity\Reservation $reservations = null)
+    {
+        $this->reservations = $reservations;
+
+        return $this;
+    }
+
+    /**
+     * Get reservations
+     *
+     * @return \Palme\AnnaleBundle\Entity\Reservation 
+     */
+    public function getReservations()
+    {
+        return $this->reservations;
+    }
+}
