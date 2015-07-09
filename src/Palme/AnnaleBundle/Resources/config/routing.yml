@@ -1,0 +1,3 @@
+palme_annale_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PalmeAnnaleBundle:Default:index }

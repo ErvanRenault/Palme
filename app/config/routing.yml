@@ -1,0 +1,4 @@
+palme_annale:
+    resource: "@PalmeAnnaleBundle/Resources/config/routing.yml"
+    prefix:   /
+
