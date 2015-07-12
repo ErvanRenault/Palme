@@ -63,3 +63,5 @@ af7626,::1,GET,http://localhost/Palme/web/app_dev.php/acceuil,1436445481,1ad45b
 1ad45b,::1,GET,http://localhost/Palme/web/app_dev.php/acceuil,1436445481,
 dba273,::1,GET,http://localhost/Palme/web/app_dev.php/hello,1436445486,
 a70992,::1,GET,http://localhost/Palme/web/app_dev.php/hello,1436459392,
+c14151,127.0.0.1,GET,http://localhost/Palme/web/app_dev.php/hello,1436724446,
+d33d3d,127.0.0.1,GET,http://localhost/Palme/web/app_dev.php/hello,1436724542,
