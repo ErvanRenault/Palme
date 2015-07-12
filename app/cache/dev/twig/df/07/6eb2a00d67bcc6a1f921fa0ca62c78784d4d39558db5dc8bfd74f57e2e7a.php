@@ -42,7 +42,7 @@ class __TwigTemplate_df076eb2a00d67bcc6a1f921fa0ca62c78784d4d39558db5dc8bfd74f57
         <div class=\"row\">
 
 
-            <div class=\"container bg-primary\">Coucou </div>
+            <div class=\"container bg-primary\">SALUT LES AMIS </div>
         </div>
 
         <div class=\"row\">
