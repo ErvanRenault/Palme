@@ -123,8 +123,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // palme_annale_homepage
-        if ($pathinfo === '/hello') {
+        if ($pathinfo === '/acceuil') {
             return array (  '_controller' => 'Palme\\AnnaleBundle\\Controller\\PalmeController::indexAction',  '_route' => 'palme_annale_homepage',);
+        }
+
+        // palme_annale_enseignant
+        if ($pathinfo === '/enseignant') {
+            return array (  '_controller' => 'Palme\\AnnaleBundle\\Controller\\PalmeController::ajoutAction',  '_route' => 'palme_annale_enseignant',);
         }
 
         // _welcome

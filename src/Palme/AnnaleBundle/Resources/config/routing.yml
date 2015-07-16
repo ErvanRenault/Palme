@@ -1,3 +1,8 @@
 palme_annale_homepage:
-    path:     /hello
+    path:     /acceuil
     defaults: { _controller: PalmeAnnaleBundle:Palme:index }
+
+palme_annale_enseignant:
+    path:     /enseignant
+    defaults: { _controller: PalmeAnnaleBundle:Palme:ajout }
+
